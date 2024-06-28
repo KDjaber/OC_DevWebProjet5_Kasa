@@ -1,0 +1,12 @@
+@import '../../style/variables.scss';
+
+.locationGallery {
+  background-color: #f6f6f6;
+  border-radius: $rounded-border-container;
+  margin: 40px 0 40px 0;
+  padding: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+}

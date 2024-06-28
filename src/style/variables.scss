@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$background-color: white;
+$accent-color: #ff6060;
+$second-color: black;
+$rounded-border-container: 30px;
+$rounded-border-element: 20px;
+$h1-fontsize: 3em;
+$default-font: 'Montserrat', sans-serif;
+
+@mixin main-font {
+  font-family: $default-font;
+  color: white;
+}
+
+@mixin secondary-font {
+  font-family: $default-font;
+  color: black;
+}
+
+@mixin h2 {
+  font-family: $default-font;
+  font-size: 2em;
+  font-weight: 500;
+  color: $accent-color;
+}
+
+@mixin h3 {
+  font-family: $default-font;
+  font-size: 1em;
+  font-weight: 500;
+  color: $second-color;
+}

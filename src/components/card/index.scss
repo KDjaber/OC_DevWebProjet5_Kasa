@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+
+.CardWrapper {
+  position: relative;
+  width: 30%;
+  height: 450px;
+  border-radius: $rounded-border-element;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $rounded-border-element;
+  }
+  .CardTitle {
+    position: absolute;
+    bottom: 15px;
+    left: 16px;
+    width: 50%;
+    margin: auto;
+    @include main-font;
+    font-weight: bold;
+    z-index: 2;
+  }
+}
+
+.CardWrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1;
+  border-radius: $rounded-border-element;
+}

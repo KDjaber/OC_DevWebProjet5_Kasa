@@ -1,0 +1,17 @@
+@import '../../style/variables.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .about-cover {
+    width: 100%;
+  }
+  .dropdown-menus {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px;
+  }
+}

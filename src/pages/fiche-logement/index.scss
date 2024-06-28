@@ -1,0 +1,64 @@
+@import '../../style/variables.scss';
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 0 0 0;
+}
+
+.location-info {
+  h2 {
+    @include h2;
+    margin: 0;
+  }
+
+  h3 {
+    @include h3;
+    margin: 5px 0 15px 0;
+  }
+
+  .tags {
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+    .tag-btn {
+      border-radius: $rounded-border-element;
+      background-color: $accent-color;
+      @include main-font;
+      font-size: 0.8em;
+      font-weight: bold;
+      padding: 6px 15px;
+    }
+  }
+}
+
+.host-info {
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    .host-name {
+      @include main-font;
+      color: $accent-color;
+      width: 40%;
+      text-align: right;
+    }
+    img {
+      border-radius: 100px;
+      height: 80px;
+    }
+  }
+  .rating {
+    width: 100%;
+  }
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 40px 0 40px 0;
+}
