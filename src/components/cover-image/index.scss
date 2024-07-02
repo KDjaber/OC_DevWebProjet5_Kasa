@@ -12,3 +12,12 @@
     border-radius: $rounded-border-container;
   }
 }
+
+@media only screen and (max-width: $max-width-mobile) {
+  .coverImage {
+    border-radius: $rounded-border-element;
+    img {
+      border-radius: $rounded-border-element;
+    }
+  }
+}

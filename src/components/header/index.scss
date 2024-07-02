@@ -10,16 +10,32 @@ nav {
     height: 50px;
   }
   .nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
     a {
       @include black-font;
       font-size: 20px;
       font-weight: 500;
       text-decoration: none;
-      padding: 0 0 0 50px;
 
       &:focus {
         text-decoration: underline;
         text-underline-offset: 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $max-width-mobile) {
+  nav {
+    .nav-links {
+      gap: 10px;
+      a {
+        font-size: 15px;
+        padding: 0;
       }
     }
   }

@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
   margin: 70px 0 100px 0;
   p {
-    @include white-font;
     font-size: 12em;
     font-weight: bold;
     color: $accent-color;
@@ -15,10 +15,24 @@
   }
   h2 {
     @include h2;
+    text-align: center;
   }
   a {
     @include black-font;
     font-size: 1em;
     font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: $max-width-mobile) {
+  .error-page {
+    gap: 100px;
+    p {
+      font-size: 7em;
+    }
+    h2 {
+      font-size: 20px;
+      width: 60%;
+    }
   }
 }

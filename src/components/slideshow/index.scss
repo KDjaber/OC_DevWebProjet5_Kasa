@@ -29,3 +29,21 @@
     @include white-font;
   }
 }
+
+@media only screen and (max-width: $max-width-mobile) {
+  .slideshow-container {
+    .coverImage {
+      height: 300px;
+    }
+    .slideshow-nav {
+      .slideshow-nav-btn-container {
+        img {
+          height: 50px;
+        }
+      }
+    }
+    p {
+      display: none;
+    }
+  }
+}

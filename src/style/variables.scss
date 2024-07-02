@@ -6,27 +6,23 @@ $second-color: black;
 $rounded-border-container: 30px;
 $rounded-border-element: 20px;
 $h1-fontsize: 3em;
-$default-font: 'Montserrat', sans-serif;
+$max-width-mobile: 428px;
 
 @mixin white-font {
-  font-family: $default-font;
   color: white;
 }
 
 @mixin black-font {
-  font-family: $default-font;
   color: black;
 }
 
 @mixin h2 {
-  font-family: $default-font;
   font-size: 2em;
   font-weight: 500;
   color: $accent-color;
 }
 
 @mixin h3 {
-  font-family: $default-font;
   font-size: 1em;
   font-weight: 500;
   color: $second-color;

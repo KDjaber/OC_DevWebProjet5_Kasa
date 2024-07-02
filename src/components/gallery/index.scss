@@ -10,3 +10,13 @@
   justify-content: space-evenly;
   gap: 40px;
 }
+
+@media only screen and (max-width: $max-width-mobile) {
+  .locationGallery {
+    background-color: transparent;
+    flex-direction: column;
+    padding: 0;
+    margin: 20px 0;
+    gap: 20px;
+  }
+}
