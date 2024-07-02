@@ -1,13 +1,9 @@
 import './index.scss';
 
-function CoverImage({ image, imageClass }) {
+function CoverImage({ image }) {
   return (
     <div className="coverImage">
-      <img
-        src={image}
-        alt="Couverture de présentation de la page"
-        className={imageClass}
-      />
+      <img src={image} alt="Couverture de présentation de la page" />
     </div>
   );
 }

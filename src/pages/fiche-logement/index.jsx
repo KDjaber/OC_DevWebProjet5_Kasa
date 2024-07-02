@@ -43,9 +43,7 @@ function Location() {
           <Dropdown
             title="Équipements"
             text={accomodation.equipments.map((equipment, index) => (
-              <ul key={index}>
-                <li key={index}>{equipment}</li>
-              </ul>
+              <li key={index}>{equipment}</li>
             ))}
           />
         </div>

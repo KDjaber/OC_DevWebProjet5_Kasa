@@ -24,9 +24,7 @@ function Slideshow({ slides }) {
   if (slides.length > 1) {
     return (
       <div className="slideshow-container">
-        <div className="slide-container">
-          <CoverImage image={slides[currentIndex]} imageClass="" />
-        </div>
+        <CoverImage image={slides[currentIndex]} />
         <div className="slideshow-nav">
           <div className="slideshow-nav-btn-container">
             <button className="back-btn" onClick={previousSlide}>

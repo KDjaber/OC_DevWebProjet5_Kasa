@@ -8,12 +8,12 @@ $rounded-border-element: 20px;
 $h1-fontsize: 3em;
 $default-font: 'Montserrat', sans-serif;
 
-@mixin main-font {
+@mixin white-font {
   font-family: $default-font;
   color: white;
 }
 
-@mixin secondary-font {
+@mixin black-font {
   font-family: $default-font;
   color: black;
 }
