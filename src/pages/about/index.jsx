@@ -1,10 +1,18 @@
+import { useFetch } from '../../hooks';
+import { useNavigate } from 'react-router-dom';
 import CoverImage from '../../components/cover-image';
 import Dropdown from '../../components/dropdown';
 import BackgroundImage from '../../assets/image2.png';
-import Info from '../../assets/infos.json';
 import './index.scss';
 
 function About() {
+  const navigate = useNavigate();
+  const { data, isLoading, error } = useFetch('/infos.json');
+
+  if (error) {
+    navigate('/404');
+  }
+
   return (
     <main>
       <div className="about">
@@ -12,13 +20,15 @@ function About() {
           <CoverImage image={BackgroundImage} />
         </div>
         <div className="dropdown-menus">
-          {Info.map((profile, index) => (
-            <Dropdown
-              key={`${profile}-${index}`}
-              title={profile.title}
-              text={profile.description}
-            />
-          ))}
+          {isLoading
+            ? null // We don't have any loader in given prototype.
+            : data.map((profile, index) => (
+                <Dropdown
+                  key={`${profile}-${index}`}
+                  title={profile.title}
+                  text={profile.description}
+                />
+              ))}
         </div>
       </div>
     </main>

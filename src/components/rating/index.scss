@@ -5,13 +5,6 @@
   justify-content: flex-end;
   margin-top: 20px;
   gap: 15px;
-  img {
-    cursor: pointer;
-  }
-}
-
-input[type='radio'] {
-  display: none;
 }
 
 @media only screen and (max-width: $max-width-mobile) {

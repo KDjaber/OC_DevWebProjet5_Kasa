@@ -3,35 +3,23 @@ import './index.scss';
 import ActiveStar from '../../assets/active-star.svg';
 import InactiveStar from '../../assets/inactive-star.svg';
 
-function Rating() {
-  const [rating, setRating] = useState(null);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+function Rating({ currentRating }) {
   const stars = [];
   const maxRating = 5;
+  let computedRating;
+
+  computedRating = parseInt(currentRating);
+  if (isNaN(computedRating)) {
+    computedRating = 0;
+  }
 
   for (let index = 0; index < maxRating; index++) {
-    const currentRating = index + 1;
     stars.push(
-      <label key={index}>
-        <input
-          key={index}
-          type="radio"
-          name={`Note de ${currentRating}/${maxRating}`}
-          value={index + 1}
-          onChange={() => setRating(currentRating)}
-        />
-        <img
-          src={
-            currentRating <= (hoveredIndex || rating)
-              ? ActiveStar
-              : InactiveStar
-          }
-          alt="Note"
-          onMouseEnter={() => setHoveredIndex(currentRating)}
-          onMouseLeave={() => setHoveredIndex(null)}
-          onChange={() => setRating(currentRating)}
-        />
-      </label>,
+      <img
+        key={`rating-${index + 1}`}
+        src={index + 1 <= computedRating ? ActiveStar : InactiveStar}
+        alt="Note"
+      />,
     );
   }
 
